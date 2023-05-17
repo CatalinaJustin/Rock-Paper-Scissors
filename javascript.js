@@ -1,46 +1,42 @@
+function getPlayerChoice () {
+    let value = prompt("enter Rock/Paper/Scissors").toLowerCase
+}
 let playerSelection = prompt("Rock, Paper, Scissors?");
+let computer;
 function computerSelection() {
     const randNum = Math.floor(Math.random() * 3) + 1;
 
     switch (randNum) {
         case 1 :
-            computer = "ROCK";
+            computerSelection = "ROCK";
             break;
         case 2 :
-            computer = "PAPER";
+            computerSelection = "PAPER";
             break
         case 3 :
-            computer = "SCISSORS";
+            computerSelection = "SCISSORS";
             break
     }
 }
-console.log(computerSelection)
 
 
-const rock = 'rock';
-rock.toUpperCase;
-const scissors = 'scissors';
-scissors.toUpperCase;
-const paper = 'paper'
-paper.toUpperCase
-
-function playRound(playerSelection, computerSelection) {
-    if ((playerSelection = 'Rock') && (computerSelection = 2)) {
-        return("You win! Rock beats Scissors");
-    } else if ((playerSelection = 'Scissors') && (computerSelection = 3)) {
-        return("You win! Scissors beats Paper");
-    } else if ((playerSelection = 'Paper') && (computerSelection = 1)) {
-        return("You win! Paper beats rock");
-    } else if ((playerSelection = 'Rock') && (computerSelection = 3)) {
-        return("You lose! Paper beats rock");
-    } else if ((playerSelection = 'Scissors') && (computerSelection = 1)) {
-        return("You lose! Rock beats Scissors");
-    } else if ((playerSelection = 'Paper') && (computerSelection = 2)) {
-        return("You lose! Scissors beats Paper");
-    } else {
-        return("You tied!")
-    }
-}
+// function playRound(playerSelection, computerSelection) {
+//     if ((playerSelection = 'Rock') && (computerSelection = 2)) {
+//         return("You win! Rock beats Scissors");
+//     } else if ((playerSelection = 'Scissors') && (computerSelection = 3)) {
+//         return("You win! Scissors beats Paper");
+//     } else if ((playerSelection = 'Paper') && (computerSelection = 1)) {
+//         return("You win! Paper beats rock");
+//     } else if ((playerSelection = 'Rock') && (computerSelection = 3)) {
+//         return("You lose! Paper beats rock");
+//     } else if ((playerSelection = 'Scissors') && (computerSelection = 1)) {
+//         return("You lose! Rock beats Scissors");
+//     } else if ((playerSelection = 'Paper') && (computerSelection = 2)) {
+//         return("You lose! Scissors beats Paper");
+//     } else {
+//         return("You tied!")
+//     }
+// }
 
 
 
