@@ -1,3 +1,6 @@
+let playerSelection = prompt("Rock, Paper, Scissors?");
+
+
 //play rock paper scissors with the computer.
 //computer randomly returns rock, paper, or scissors.
 //write a function that declares a winner between the the player and the computer.
