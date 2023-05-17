@@ -1,7 +1,7 @@
 function getPlayerChoice () {
     let value = prompt("enter Rock/Paper/Scissors").toLowerCase
 }
-let playerSelection = prompt("Rock, Paper, Scissors?");
+const playerSelection = prompt("Rock, Paper, Scissors?");
 let computer;
 function computerSelection() {
     const randNum = Math.floor(Math.random() * 3) + 1;
@@ -19,6 +19,17 @@ function computerSelection() {
     }
 }
 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
+        return 'Draw!';
+    } else if (computerSelection == "Rock") {
+        return (playerSelection == "Paper") ? "You win! Paper beats rock" : "You lose! Rock beats scissors"
+    } else if (computerSelection == "Paper") {
+        return (playerSelection == "Scissors") ? "You win! Scissors beats Paper" : "You lose! Paper beats Rock"
+    } else if (computerSelection == "Scissors") {
+        return (playerSelection == "Rock") ? "You win! Rock beats Scissors" : "You lose! Scissors beats Paper"
+    }
+}
 
 // function playRound(playerSelection, computerSelection) {
 //     if ((playerSelection = 'Rock') && (computerSelection = 2)) {
