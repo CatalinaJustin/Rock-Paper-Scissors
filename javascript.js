@@ -9,8 +9,9 @@ function game() {
 }
 
 function playRound () {
-    getPlayerChoice = playerSelection;
-    computerChoice = computerSelection;
+    const playerSelection = getPlayerChoice();
+    const computerSelection = computerChoice ();
+    console.log(computerChoice)
 }
 
 function getPlayerChoice () {
@@ -31,21 +32,21 @@ function getPlayerChoice () {
     return input;
 }
 
-console.log(getPlayerChoice())
+
 
 //computer randomly returns rock, paper, or scissors.
-function computerSelection() {
+function computerChoice() {
     return choices[Math.floor(Math.random()*choices.length)]
 }
 
 //write a function that declares a winner between the the player and the computer.
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection == computerSelection) {
+function checkWinner(choiceP, choiceC) {
+    if (choiceP === choiceC) {
         return 'Draw!';
     } else if (
-    (playerSelection == "rock" && computerSelection == "scissors") ||
-    (playerSelection == "scissors" && computerSelection == "paper") ||
-    (playerSelection == "paper" && computerSelection == "rock") 
+    (choiceP === "rock" && choiceC === "scissors") ||
+    (choiceP === "scissors" && choiceC === "paper") ||
+    (choiceP === "paper" && choiceC === "rock") 
     ){
         return "Player Wins"
     } else {
