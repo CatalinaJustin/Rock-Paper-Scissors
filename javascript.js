@@ -8,6 +8,7 @@ function game() {
     for (let i = 1; i <= 5; i++) {
         playRound(i);
     }
+    logWins()
 }
 
 function playRound () {
@@ -67,6 +68,9 @@ function validateInput(choice) {
     }
 }
 
+function logWins() {
+    console.log(winners)
+}
 
 
 game()
