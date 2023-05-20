@@ -7,11 +7,10 @@ const choices = ["rock", "paper", "scissors"]
 function game() {
     playRound
 }
-function getPlayerChoice (
-    getPlayerChoice = prompt("Rock, Paper, Scissors?") {
-    getPlayerChoice = getPlayerChoice.toLowerCase
-     }
-)
+function getPlayerChoice () {
+    let input = prompt("Rock, Paper, Scissors?");
+    input = input.toLowerCase;
+    }
 function playerSelection () {
 }
 
@@ -19,6 +18,7 @@ function playerSelection () {
 function computerSelection() {
     return choices[Math.floor(Math.random()*choices.length)]
 }
+console.log(computerSelection())
 //write a function that declares a winner between the the player and the computer.
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -32,7 +32,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound())
 
 game()
 
