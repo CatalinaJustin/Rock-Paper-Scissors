@@ -3,26 +3,13 @@ Prompt Rock, paper, scissors to player
 case sensitive so a person can input rock or any of the other two in any other variation. (name =name.toLowerCase)*/
 const choices = ["rock", "paper", "scissors"]
 
-const getPlayerChoice = prompt("Rock, Paper, Scissors?").toLowerCase;
+const getPlayerChoice = prompt("Rock, Paper, Scissors?")
 function playerSelection () {
-    let value = (Rock || Paper || Scissors).toLowerCase
 }
 
 //computer randomly returns rock, paper, or scissors.
 function computerSelection() {
-    const randNum = Math.floor(Math.random() * 3) + 1;
-
-    switch (randNum) {
-        case 1 :
-            computerSelection = "ROCK";
-            break;
-        case 2 :
-            computerSelection = "PAPER";
-            break
-        case 3 :
-            computerSelection = "SCISSORS";
-            break
-    }
+    return choices[Math.floor(Math.random()*choices.length)]
 }
 //write a function that declares a winner between the the player and the computer.
 function playRound(playerSelection, computerSelection) {
