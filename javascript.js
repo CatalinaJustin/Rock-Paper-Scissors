@@ -14,9 +14,7 @@ function game() {
 function playRound (round) {
     const playerSelection = getPlayerChoice();
     const computerSelection = computerChoice();
-    console.log(computerChoice());
     const winner = checkWinner(playerSelection, computerSelection);
-    console.log(winner)
     winners.push(winner)
     logRound(round, playerSelection, computerSelection, winner)
 }
