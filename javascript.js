@@ -11,13 +11,14 @@ function game() {
     logWins()
 }
 
-function playRound () {
+function playRound (round) {
     const playerSelection = getPlayerChoice();
     const computerSelection = computerChoice();
     console.log(computerChoice());
     const winner = checkWinner(playerSelection, computerSelection);
     console.log(winner)
     winners.push(winner)
+    logRound(round, playerSelection, computerSelection, winner)
 }
 
 function getPlayerChoice () {
@@ -70,6 +71,13 @@ function validateInput(choice) {
 
 function logWins() {
     console.log(winners)
+}
+
+function logRound(round, playerSelection, computerSelection, winner) {
+    console.log('Round:', round);
+    console.log('Player Chose:', playerSelection);
+    console.log('Computer Chose:', computerSelection);
+    console.log('Results:', winner)
 }
 
 
