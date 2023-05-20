@@ -3,6 +3,10 @@ Prompt Rock, paper, scissors to player
 case sensitive so a person can input rock or any of the other two in any other variation. (name =name.toLowerCase)*/
 const choices = ["rock", "paper", "scissors"]
 
+
+function game() {
+    playRound
+}
 const getPlayerChoice = prompt("Rock, Paper, Scissors?")
 function playerSelection () {
 }
@@ -26,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound(playerSelection, computerSelection))
 
-
+game()
 
 
 /*Rock beats scissors, scissors beats paper, paper beats scissors. Return the winner of the declaration with an explanation.
