@@ -5,7 +5,7 @@ const choices = ["rock", "paper", "scissors"]
 
 
 function game() {
-    playRound
+    playRound();
 }
 
 function playRound () {
@@ -16,9 +16,9 @@ function playRound () {
 function getPlayerChoice () {
     let input = prompt("Rock, Paper, Scissors?");
     input = input.toLowerCase;
-    }
-function playerSelection () {
 }
+
+
 
 //computer randomly returns rock, paper, or scissors.
 function computerSelection() {
@@ -29,18 +29,20 @@ console.log(computerSelection())
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return 'Draw!';
-    } else if (computerSelection == "ROCK") {
-        return (playerSelection == "Paper") ? "You win! Paper beats rock" : "You lose! Rock beats scissors"
-    } else if (computerSelection == "PAPER") {
-        return (playerSelection == "Scissors") ? "You win! Scissors beats Paper" : "You lose! Paper beats Rock"
-    } else if (computerSelection == "SCISSORS") {
-        return (playerSelection == "Rock") ? "You win! Rock beats Scissors" : "You lose! Scissors beats Paper"
+    } else if (
+    (playerSelection == "rock" && computerSelection == "scissors") ||
+    (playerSelection == "scissors" && computerSelection == "paper") ||
+    (playerSelection == "paper" && computerSelection == "rock") 
+    ){
+        return "Player Wins"
+    } else {
+        return "Computer Wins"
     }
 }
 
-console.log(playRound())
 
-game()
+
+console.log(game())
 
 
 /*Rock beats scissors, scissors beats paper, paper beats scissors. Return the winner of the declaration with an explanation.
