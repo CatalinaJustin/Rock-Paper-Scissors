@@ -15,16 +15,29 @@ function playRound () {
 
 function getPlayerChoice () {
     let input = prompt("Rock, Paper, Scissors?");
-    input = input.toLowerCase;
+    while (input == null) {
+        input = prompt("Rock, Paper, Scissors?");
+    }
+    input = input.toLowerCase();
+    let check = validateInput(input);
+    while (check == false) {
+        input = prompt("Type Rock, Paper, or Scissors again. Spelling matters");
+    while (input == null) {
+        input = prompt("Rock, Paper, Scissors?");
+    }
+    input = input.toLowerCase();
+    check = validateInput(input);
+    }
+    return input;
 }
 
-
+console.log(getPlayerChoice())
 
 //computer randomly returns rock, paper, or scissors.
 function computerSelection() {
     return choices[Math.floor(Math.random()*choices.length)]
 }
-console.log(computerSelection())
+
 //write a function that declares a winner between the the player and the computer.
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -40,9 +53,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function validateInput(choice) {
+    if (choices.includes(choice)) {
+        return true;
+    } else {
+        return false
+    }
+}
 
-
-console.log(game())
+game()
 
 
 /*Rock beats scissors, scissors beats paper, paper beats scissors. Return the winner of the declaration with an explanation.
