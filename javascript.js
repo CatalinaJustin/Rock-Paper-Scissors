@@ -7,6 +7,12 @@ const choices = ["rock", "paper", "scissors"]
 function game() {
     playRound
 }
+
+function playRound () {
+    getPlayerChoice = playerSelection;
+    computerChoice = computerSelection;
+}
+
 function getPlayerChoice () {
     let input = prompt("Rock, Paper, Scissors?");
     input = input.toLowerCase;
