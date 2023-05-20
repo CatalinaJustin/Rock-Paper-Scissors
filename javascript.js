@@ -7,7 +7,11 @@ const choices = ["rock", "paper", "scissors"]
 function game() {
     playRound
 }
-const getPlayerChoice = prompt("Rock, Paper, Scissors?")
+function getPlayerChoice (
+    getPlayerChoice = prompt("Rock, Paper, Scissors?") {
+    getPlayerChoice = getPlayerChoice.toLowerCase
+     }
+)
 function playerSelection () {
 }
 
