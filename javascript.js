@@ -10,8 +10,11 @@ function game() {
 
 function playRound () {
     const playerSelection = getPlayerChoice();
-    const computerSelection = computerChoice ();
-    console.log(computerChoice)
+    const computerSelection = computerChoice();
+    console.log(computerChoice());
+    const winner = checkWinner(playerSelection, computerSelection);
+    console.log(winner)
+
 }
 
 function getPlayerChoice () {
