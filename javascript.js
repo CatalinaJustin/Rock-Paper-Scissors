@@ -2,10 +2,12 @@
 Prompt Rock, paper, scissors to player
 case sensitive so a person can input rock or any of the other two in any other variation. (name =name.toLowerCase)*/
 const choices = ["rock", "paper", "scissors"]
-
+const winners = []
 
 function game() {
-    playRound();
+    for (let i = 1; i <= 5; i++) {
+        playRound(i);
+    }
 }
 
 function playRound () {
@@ -14,7 +16,7 @@ function playRound () {
     console.log(computerChoice());
     const winner = checkWinner(playerSelection, computerSelection);
     console.log(winner)
-
+    winners.push(winner)
 }
 
 function getPlayerChoice () {
@@ -64,6 +66,8 @@ function validateInput(choice) {
         return false
     }
 }
+
+
 
 game()
 
