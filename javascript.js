@@ -5,9 +5,9 @@ const choices = ["rock", "paper", "scissors"]
 const winners = []
 
 function game() {
-    for (let i = 1; i <= 5; i++) {
-        playRound(i);
-    }
+    // for (let i = 1; i <= 5; i++) {
+        playRound(); // put an in playRound to log rounds
+    // }
     logWins()
 }
 
