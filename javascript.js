@@ -6,7 +6,7 @@ const winners = []
 
 function game() {
     // for (let i = 1; i <= 5; i++) {
-        playRound(); // put an in playRound to log rounds
+        playRound(); // put an i in playRound to log rounds
     // }
     logWins()
 }
@@ -81,14 +81,12 @@ function logRound(round, playerSelection, computerSelection, winner) {
 const rock = document.getElementById("rockBtn");
 const paper = document.getElementById("paperBn");
 const scissors = document.getElementById("scissorsBtn");
-rock.addEventListener('click', clickPlayerChoice)
+rock.addEventListener('click', function() {
+    checkWinner('rock', computerChoice())
+})
 
-function clickPlayerChoice() {
-    if (clickPlayerChoice === rock) {
-        let getPlayerChoice = 'rock'
-    }
-}
-console.log(clickPlayerChoice)
+
+
 game()
 
 
