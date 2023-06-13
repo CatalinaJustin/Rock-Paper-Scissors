@@ -81,8 +81,17 @@ function logRound(round, playerSelection, computerSelection, winner) {
 const rock = document.getElementById("rockBtn");
 const paper = document.getElementById("paperBn");
 const scissors = document.getElementById("scissorsBtn");
+
 rock.addEventListener('click', function() {
-    checkWinner('rock', computerChoice())
+    playRound('rock', computerChoice());
+})
+
+paper.addEventListener('click', function(){
+    playRound('paper', computerChoice())
+})
+
+scissors.addEventListener('click', function() {
+    playRound('scissors', computerChoice())
 })
 
 
