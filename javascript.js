@@ -78,7 +78,17 @@ function logRound(round, playerSelection, computerSelection, winner) {
     console.log('Results:', winner)
 }
 
+const rock = document.getElementById("rockBtn");
+const paper = document.getElementById("paperBn");
+const scissors = document.getElementById("scissorsBtn");
+rock.addEventListener('click', clickPlayerChoice)
 
+function clickPlayerChoice() {
+    if (clickPlayerChoice === rock) {
+        let getPlayerChoice = 'rock'
+    }
+}
+console.log(clickPlayerChoice)
 game()
 
 
