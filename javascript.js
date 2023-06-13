@@ -82,6 +82,13 @@ function validateInput(choice) {
 }
 
 function logWins() {
+    let playerWins = winners.filter((item) => item == "Player").length;
+    let computerWins = winners.filter((item) => item == "Computer").length;
+    let draws = winners.filter((item) => item == "Draw!").length;
+    console.log("Results:");
+    console.log("Player Wins:", playerWins)
+    console.log("Computer Wins:", computerWins);
+    console.log("Draws:", draws)
     console.log(winners)
 }
 
