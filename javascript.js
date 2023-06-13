@@ -3,6 +3,10 @@ Prompt Rock, paper, scissors to player
 case sensitive so a person can input rock or any of the other two in any other variation. (name =name.toLowerCase)*/
 const choices = ["rock", "paper", "scissors"]
 const winners = []
+const rock = document.getElementById("rockBtn");
+const paper = document.getElementById("paperBtn");
+const scissors = document.getElementById("scissorsBtn");
+
 
 function game() {
     // for (let i = 1; i <= 5; i++) {
@@ -10,13 +14,23 @@ function game() {
     // }
     logWins()
 }
+rock.addEventListener('click', function() {
+    playRound('rock', computerChoice());
+})
 
-function playRound (round) {
-    const playerSelection = getPlayerChoice();
-    const computerSelection = computerChoice();
+paper.addEventListener('click', function() {
+    playRound('paper', computerChoice())
+})
+
+scissors.addEventListener('click', function() {
+    playRound('scissors', computerChoice())
+})
+
+function playRound (playerSelection, computerSelection) {
+    
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner)
-    logRound(round, playerSelection, computerSelection, winner)
+    logRound(playerSelection, computerSelection, winner)
 }
 
 function getPlayerChoice () {
@@ -71,28 +85,14 @@ function logWins() {
     console.log(winners)
 }
 
-function logRound(round, playerSelection, computerSelection, winner) {
-    console.log('Round:', round);
+function logRound(playerSelection, computerSelection, winner) {
+    // console.log('Round:', round);
     console.log('Player Chose:', playerSelection);
     console.log('Computer Chose:', computerSelection);
     console.log('Results:', winner)
 }
 
-const rock = document.getElementById("rockBtn");
-const paper = document.getElementById("paperBn");
-const scissors = document.getElementById("scissorsBtn");
 
-rock.addEventListener('click', function() {
-    playRound('rock', computerChoice());
-})
-
-paper.addEventListener('click', function(){
-    playRound('paper', computerChoice())
-})
-
-scissors.addEventListener('click', function() {
-    playRound('scissors', computerChoice())
-})
 
 
 
