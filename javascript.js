@@ -10,21 +10,30 @@ const scissors = document.getElementById("scissorsBtn");
 
 function game() {
     // for (let i = 1; i <= 5; i++) {
-        playRound(); // put an i in playRound to log rounds
+    if (rock.addEventListener('click', function() {
+        playRound('rock', computerChoice());
+    })) {
+    } else if (paper.addEventListener('click', function() {
+        playRound('paper', computerChoice())
+    })) {
+    } else if (scissors.addEventListener('click', function() {
+        playRound('scissors', computerChoice())
+    }))
+        // playRound(); // put an i in playRound to log rounds
     // }
     logWins()
 }
-rock.addEventListener('click', function() {
-    playRound('rock', computerChoice());
-})
+// rock.addEventListener('click', function() {
+//     playRound('rock', computerChoice());
+// })
 
-paper.addEventListener('click', function() {
-    playRound('paper', computerChoice())
-})
+// paper.addEventListener('click', function() {
+//     playRound('paper', computerChoice())
+// })
 
-scissors.addEventListener('click', function() {
-    playRound('scissors', computerChoice())
-})
+// scissors.addEventListener('click', function() {
+//     playRound('scissors', computerChoice())
+// })
 
 function playRound (playerSelection, computerSelection) {
     
