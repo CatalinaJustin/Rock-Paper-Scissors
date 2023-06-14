@@ -103,7 +103,7 @@ function logRound(playerSelection, computerSelection, winner) {
 
 
 
-game()
+// game()
 
 
 /*Rock beats scissors, scissors beats paper, paper beats scissors. Return the winner of the declaration with an explanation.
