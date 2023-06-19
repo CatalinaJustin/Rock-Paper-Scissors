@@ -59,7 +59,10 @@ function startGame() {
 }
 
 function playRound (playerSelection, computerSelection) {
-    
+    let wins = checkWins()
+    if(wins >= 5) {
+        return
+    }
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner)
     logRound(playerSelection, computerSelection, winner)
@@ -93,6 +96,11 @@ function computerChoice() {
     return choices[Math.floor(Math.random()*choices.length)]
 }
 
+function checkWins(){
+    const pWinCount = winners.filter((item) => item == "Player")
+    const cWinCount = winners.filter((item) => item == "Computer")
+    return Math.max(pWinCount,cWinCount) //mathMax takes in as many values as you want and it will return the highest number
+}
 //write a function that declares a winner between the the player and the computer.
 function checkWinner(choiceP, choiceC) {
     if (choiceP === choiceC) {
