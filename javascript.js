@@ -38,18 +38,32 @@ function playRound (playerSelection, computerSelection) {
         return
     }
     const winner = checkWinner(playerSelection, computerSelection);
-    winners.push(winner)
-    logRound(playerSelection, computerSelection, winner)
+    winners.push(winner);
+    tallyWins();
+    displayRound(playerSelection, computerSelection, winner);
+    wins = checkWins();
+    if(wins == 5) {
+        //display end results
+        //change the button to visible
+        //change the text to display winner 
+        displayEnd()
+    }
+}
 
-    winners.push(winner)
-    tallyWins()
-    displayRound(playerSelection, computerSelection, winner)
+function displayEnd() {
+    let playerWins = winners.filter((item) => item == "Player").length;
+
+    if(playerWins == 5) {
+        document.querySelector('.winner').textContent = 'You Won 5 Games, Congrats'
+    } else {
+        document.querySelector('.winner').textContent = 'Sorry, The Computer Won 5 times'
+    }
 }
 
 function displayRound(playerSelection, computerSelection, winner) {
-    document.querySelector('.playerChoice').textContent = `You Chose: ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}`
-    document.querySelector('.computerChoice').textContent = `The Computer Chose: ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`
-    document.querySelector('.draws').textContent = `Draws: ${draws}`
+    document.querySelector('.playerChoice').textContent = `You Chose: ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}`;
+    document.querySelector('.computerChoice').textContent = `The Computer Chose: ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`;
+    document.querySelector('.draws').textContent = `Draws: ${draws}`;
 }
 
 function tallyWins() {
