@@ -42,6 +42,18 @@ scissors.addEventListener('click', function() {
     playRound('scissors', computerChoice())
 })
 
+function resetGame() {
+    // reset game
+}
+
+function startGame() {
+    //play the game until someone wins 5 times
+    let imgs = document.querySelectorAll('img')
+    imgs.forEach((img) =>
+    img.addEventListener(('click', () => {}))
+    )
+}
+
 function playRound (playerSelection, computerSelection) {
     
     const winner = checkWinner(playerSelection, computerSelection);
