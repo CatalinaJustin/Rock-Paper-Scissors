@@ -70,23 +70,6 @@ function playRound (playerSelection, computerSelection) {
     winners.push(winner)
 }
 
-// function getPlayerChoice () {
-//     let input = prompt("Rock, Paper, Scissors?");
-//     while (input == null) {
-//         input = prompt("Rock, Paper, Scissors?");
-//     }
-//     input = input.toLowerCase();
-//     let check = validateInput(input);
-//     while (check == false) {
-//         input = prompt("Type Rock, Paper, or Scissors again. Spelling matters");
-//     while (input == null) {
-//         input = prompt("Rock, Paper, Scissors?");
-//     }
-//     input = input.toLowerCase();
-//     check = validateInput(input);
-//     }
-//     return input;
-// }
 
 
 
