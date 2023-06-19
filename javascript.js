@@ -68,9 +68,17 @@ function playRound (playerSelection, computerSelection) {
     logRound(playerSelection, computerSelection, winner)
 
     winners.push(winner)
+    tallyWins()
 }
 
-
+function tallyWins() {
+    const pWinCount = winners.filter((item) => item == "Player").length;
+    const cWinCount = winners.filter((item) => item == "Computer").length;
+    const draws = winners.filter((item) => "Draw").length;
+    document.querySelector('.playerScore').textContent = `Score: ${pWinCount}`;
+    document.querySelector('.computerScore').textContent = `Score: ${cWinCount}`;
+    document.querySelector('.draws').textContent = `Score: ${draws}`;
+}
 
 
 //computer randomly returns rock, paper, or scissors.
@@ -97,6 +105,12 @@ function checkWinner(choiceP, choiceC) {
     } else {
         return "Computer Wins"
     }
+}
+
+function setWins() {
+    const pWinCount = winners.filter((item) => item == "Player").length;
+    const cWinCount = winners.filter((item) => item == "Computer").length;
+    const draws = winners.filter((item) => "Draw").length;
 }
 
 function validateInput(choice) {
