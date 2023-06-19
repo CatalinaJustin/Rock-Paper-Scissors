@@ -47,30 +47,33 @@ function playRound (playerSelection, computerSelection) {
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner)
     logRound(playerSelection, computerSelection, winner)
+
+    winners.push(winner)
 }
 
-function getPlayerChoice () {
-    let input = prompt("Rock, Paper, Scissors?");
-    while (input == null) {
-        input = prompt("Rock, Paper, Scissors?");
-    }
-    input = input.toLowerCase();
-    let check = validateInput(input);
-    while (check == false) {
-        input = prompt("Type Rock, Paper, or Scissors again. Spelling matters");
-    while (input == null) {
-        input = prompt("Rock, Paper, Scissors?");
-    }
-    input = input.toLowerCase();
-    check = validateInput(input);
-    }
-    return input;
-}
+// function getPlayerChoice () {
+//     let input = prompt("Rock, Paper, Scissors?");
+//     while (input == null) {
+//         input = prompt("Rock, Paper, Scissors?");
+//     }
+//     input = input.toLowerCase();
+//     let check = validateInput(input);
+//     while (check == false) {
+//         input = prompt("Type Rock, Paper, or Scissors again. Spelling matters");
+//     while (input == null) {
+//         input = prompt("Rock, Paper, Scissors?");
+//     }
+//     input = input.toLowerCase();
+//     check = validateInput(input);
+//     }
+//     return input;
+// }
 
 
 
 //computer randomly returns rock, paper, or scissors.
 function computerChoice() {
+    //todo - update the dom with the computer selection
     return choices[Math.floor(Math.random()*choices.length)]
 }
 
