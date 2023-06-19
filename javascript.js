@@ -50,7 +50,11 @@ function startGame() {
     //play the game until someone wins 5 times
     let imgs = document.querySelectorAll('img')
     imgs.forEach((img) =>
-    img.addEventListener(('click', () => {}))
+    img.addEventListener(('click', () => {
+        if(img.id) {
+            playRound(img.id)
+        }
+    }))
     )
 }
 
