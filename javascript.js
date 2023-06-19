@@ -9,38 +9,12 @@ const scissors = document.getElementById("scissorsBtn");
 
 
 function game() {
-    let playerWins = 0;
-    let computerWins = 0; 
-
-    // for (let i = 1; i <= 5; i++) {
-    // rock.addEventListener('click', function() {
-    //     const playerChoice = 'rock';
-    //     const computerChoice = computerChoice();
-    //     playRound('rock', computerChoice());
-    // });
-
-    // } paper.addEventListener('click', function() {
-    //     playRound('paper', computerChoice())
-    // }); 
-
-    // scissors.addEventListener('click', function() {
-    //     playRound('scissors', computerChoice())
-    // });
+    
 
         playRound(); // put an i in playRound to log rounds
     logWins();
 }
-rock.addEventListener('click', function() {
-    playRound('rock', computerChoice());
-})
 
-paper.addEventListener('click', function() {
-    playRound('paper', computerChoice())
-})
-
-scissors.addEventListener('click', function() {
-    playRound('scissors', computerChoice())
-})
 
 function resetGame() {
     // reset game
@@ -69,6 +43,13 @@ function playRound (playerSelection, computerSelection) {
 
     winners.push(winner)
     tallyWins()
+    displayRound(playerSelection, computerSelection, winner)
+}
+
+function displayRound(playerSelection, computerSelection, winner) {
+    document.querySelector('.playerChoice').textContent = `You Chose: ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}`
+    document.querySelector('.computerChoice').textContent = `The Computer Chose: ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`
+    document.querySelector('.draws').textContent = `Draws: ${draws}`
 }
 
 function tallyWins() {
